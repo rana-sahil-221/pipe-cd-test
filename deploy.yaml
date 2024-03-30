@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pipecd-deployment
+  labels:
+    app: pipecd-test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pipecd-test
+  template:
+    metadata:
+      labels:
+        app: pipecd-test
+    spec:
+      containers:
+      - name:  pipecd-test
+        image: kubesahil221/demo-img:v1.0
+        ports:
+        - containerPort: 80
+
