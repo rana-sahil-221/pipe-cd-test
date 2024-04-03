@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name:  pipecd-test
-        image: kubesahil221/demo-img:v2.0
+        image: kubesahil221/demo-img:v1.0
         ports:
         - containerPort: 80
 
