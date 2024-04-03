@@ -1,0 +1,10 @@
+apiVersion: pipecd.dev/v1beta1
+kind: KubernetesApp
+spec:
+  name: test
+  labels:
+    env: test
+  input:
+    manifests:
+      - deploy.yaml
+      - svc.yaml

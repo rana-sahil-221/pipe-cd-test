@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pipecd-deployment
+  name: test
   labels:
-    app: pipecd-test
+    env: test
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: pipecd-test
+      env: test
   template:
     metadata:
       labels:
-        app: pipecd-test
+        env: test
     spec:
       containers:
       - name:  pipecd-test
